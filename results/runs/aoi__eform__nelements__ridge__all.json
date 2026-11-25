@@ -1,0 +1,60 @@
+{
+ "dataset": "aoi",
+ "split": "nelements",
+ "regressor": "ridge",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "alpha": 0.05
+ },
+ "oof": {
+  "n": 3684,
+  "mae": 0.049465994237714576,
+  "rmse": 0.07746698731592418,
+  "r2": 0.9342501635876406
+ },
+ "test": {
+  "n": 4116,
+  "mae": 0.11226114472732557,
+  "rmse": 0.20010926195130316,
+  "r2": 0.9578706350597468
+ },
+ "test_inside": {
+  "n": 3951,
+  "mae": 0.10732282543716778,
+  "rmse": 0.19543980991782492,
+  "r2": 0.929828748746869
+ },
+ "test_outside": {
+  "n": 165,
+  "mae": 0.23051144482073957,
+  "rmse": 0.29029452188510374,
+  "r2": 0.701018451173726
+ },
+ "train_range": [
+  -1.0889718949999994,
+  2.869360152
+ ],
+ "frac_true_outside": 0.04008746355685131,
+ "frac_pred_outside": 0.047619047619047616,
+ "slope_outside": 0.9921048448304188,
+ "seconds": 18.414939641952515,
+ "diagnostic": {
+  "name": "max |x_j w_j|",
+  "pearson": 0.45132376124607365,
+  "spearman": 0.3483823421656967,
+  "mean_score_inside": 1.4292345285682346,
+  "mean_score_outside": 2.5411063337434032
+ },
+ "key": "aoi/eform/nelements/ridge/all",
+ "split_description": "train on <= 2 element types",
+ "split_kw": {},
+ "n_pool": 3684,
+ "n_test": 4116,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": null
+}

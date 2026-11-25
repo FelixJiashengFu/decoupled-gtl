@@ -1,0 +1,52 @@
+{
+ "dataset": "aoi",
+ "split": "temporal",
+ "regressor": "local_ridge",
+ "features": [
+  "matminer"
+ ],
+ "best_params": {
+  "n_neighbors": 130,
+  "alpha": 0.15000000000000002
+ },
+ "oof": {
+  "n": 2259,
+  "mae": 0.09156822005406584,
+  "rmse": 0.13398407700972279,
+  "r2": 0.8174002575404189
+ },
+ "test": {
+  "n": 5515,
+  "mae": 0.36047597648621416,
+  "rmse": 0.8319620927446922,
+  "r2": -0.005341031504689342
+ },
+ "test_inside": {
+  "n": 5040,
+  "mae": 0.16323683959318,
+  "rmse": 0.334840220959935,
+  "r2": 0.20962346181295044
+ },
+ "test_outside": {
+  "n": 475,
+  "mae": 2.4532870289933553,
+  "rmse": 2.616624144018506,
+  "r2": -12.423174301066636
+ },
+ "train_range": [
+  -1.089973603749999,
+  1.5750217241954028
+ ],
+ "frac_true_outside": 0.08612873980054397,
+ "frac_pred_outside": 0.0032638259292837716,
+ "slope_outside": 0.005854632439243255,
+ "seconds": 32.08289194107056,
+ "key": "aoi/eform/temporal/local_ridge/matminer",
+ "split_description": "MP18 -> MP21",
+ "split_kw": {},
+ "n_pool": 2259,
+ "n_test": 5515,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": null
+}

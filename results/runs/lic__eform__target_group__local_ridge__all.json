@@ -1,0 +1,57 @@
+{
+ "dataset": "lic",
+ "split": "target_group",
+ "regressor": "local_ridge",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "n_neighbors": 190,
+  "alpha": 0.30000000000000004
+ },
+ "oof": {
+  "n": 6336,
+  "mae": 0.0906414285702914,
+  "rmse": 0.12475935075257848,
+  "r2": 0.9422600928828262
+ },
+ "test": {
+  "n": 2688,
+  "mae": 0.21885010732963667,
+  "rmse": 0.2757649191076047,
+  "r2": 0.9341582924268459
+ },
+ "test_inside": {
+  "n": 2291,
+  "mae": 0.19200735095974272,
+  "rmse": 0.24144191815809357,
+  "r2": 0.9303214498444686
+ },
+ "test_outside": {
+  "n": 397,
+  "mae": 0.3737537719226517,
+  "rmse": 0.42248043288133375,
+  "r2": 0.9360956700574445
+ },
+ "train_range": [
+  -2.575,
+  0.3872
+ ],
+ "frac_true_outside": 0.14769345238095238,
+ "frac_pred_outside": 0.04092261904761905,
+ "slope_outside": 0.7779663181866804,
+ "seconds": 66.29221034049988,
+ "key": "lic/eform/target_group/local_ridge/all",
+ "split_description": "groups with any y < -2.6 or y > 0.4 held out",
+ "split_kw": {
+  "lower": -2.6,
+  "upper": 0.4
+ },
+ "n_pool": 6336,
+ "n_test": 2688,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": null
+}

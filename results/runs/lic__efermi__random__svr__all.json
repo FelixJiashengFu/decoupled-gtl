@@ -1,0 +1,58 @@
+{
+ "dataset": "lic",
+ "split": "random",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 1000.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 7204,
+  "mae": 0.2280650603724368,
+  "rmse": 0.43788543867004864,
+  "r2": 0.971059375538499
+ },
+ "test": {
+  "n": 1800,
+  "mae": 0.19029969738311636,
+  "rmse": 0.37545145768807464,
+  "r2": 0.9783855509158593
+ },
+ "test_inside": {
+  "n": 1800,
+  "mae": 0.19029969738311636,
+  "rmse": 0.37545145768807464,
+  "r2": 0.9783855509158593
+ },
+ "test_outside": {
+  "n": 0
+ },
+ "train_range": [
+  -1.43163382,
+  17.77160061
+ ],
+ "frac_true_outside": 0.0,
+ "frac_pred_outside": 0.0,
+ "slope_outside": NaN,
+ "seconds": 726.1329169273376,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.19408711698086495,
+  "spearman": 0.32863564258301725,
+  "mean_score_inside": 0.016496066454433828,
+  "mean_score_outside": null
+ },
+ "key": "lic/efermi/random/svr/all",
+ "split_description": "random 1/5 test",
+ "split_kw": {},
+ "n_pool": 7204,
+ "n_test": 1800,
+ "target": "efermi",
+ "unit": "eV",
+ "svr_grid": "medium"
+}

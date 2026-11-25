@@ -1,0 +1,57 @@
+{
+ "dataset": "lic",
+ "split": "random",
+ "regressor": "ridge",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "alpha": 0.05
+ },
+ "oof": {
+  "n": 7204,
+  "mae": 0.3113481159036332,
+  "rmse": 0.4955006034430733,
+  "r2": 0.9629425726192236
+ },
+ "test": {
+  "n": 1800,
+  "mae": 0.2863254727961694,
+  "rmse": 0.4357049295262364,
+  "r2": 0.9708913859385777
+ },
+ "test_inside": {
+  "n": 1800,
+  "mae": 0.2863254727961694,
+  "rmse": 0.4357049295262364,
+  "r2": 0.9708913859385777
+ },
+ "test_outside": {
+  "n": 0
+ },
+ "train_range": [
+  -1.43163382,
+  17.77160061
+ ],
+ "frac_true_outside": 0.0,
+ "frac_pred_outside": 0.0,
+ "slope_outside": NaN,
+ "seconds": 18.20810556411743,
+ "diagnostic": {
+  "name": "max |x_j w_j|",
+  "pearson": -0.066757917827105,
+  "spearman": -0.10550849964254105,
+  "mean_score_inside": 1.2705578607324293,
+  "mean_score_outside": null
+ },
+ "key": "lic/efermi/random/ridge/all",
+ "split_description": "random 1/5 test",
+ "split_kw": {},
+ "n_pool": 7204,
+ "n_test": 1800,
+ "target": "efermi",
+ "unit": "eV",
+ "svr_grid": null
+}

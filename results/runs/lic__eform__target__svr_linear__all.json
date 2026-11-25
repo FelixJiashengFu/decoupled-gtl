@@ -1,0 +1,54 @@
+{
+ "dataset": "lic",
+ "split": "target",
+ "regressor": "svr_linear",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 10.0,
+  "epsilon": 0.02
+ },
+ "oof": {
+  "n": 6989,
+  "mae": 0.05582723731137387,
+  "rmse": 0.0836562359227722,
+  "r2": 0.9653090831671676
+ },
+ "test": {
+  "n": 2035,
+  "mae": 0.15012012442396272,
+  "rmse": 0.19820584328537139,
+  "r2": 0.9761805309273865
+ },
+ "test_inside": {
+  "n": 0
+ },
+ "test_outside": {
+  "n": 2035,
+  "mae": 0.15012012442396272,
+  "rmse": 0.19820584328537139,
+  "r2": 0.9761805309273865
+ },
+ "train_range": [
+  -1.6995,
+  0.1
+ ],
+ "frac_true_outside": 1.0,
+ "frac_pred_outside": 0.8098280098280098,
+ "slope_outside": 0.8972066936762334,
+ "seconds": 1376.725303888321,
+ "key": "lic/eform/target/svr_linear/all",
+ "split_description": "y < -1.7 or y > 0.1 is test",
+ "split_kw": {
+  "lower": -1.7,
+  "upper": 0.1
+ },
+ "n_pool": 6989,
+ "n_test": 2035,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

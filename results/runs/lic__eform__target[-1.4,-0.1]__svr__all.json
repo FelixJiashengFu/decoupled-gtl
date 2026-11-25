@@ -1,0 +1,61 @@
+{
+ "dataset": "lic",
+ "split": "target",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 5594,
+  "mae": 0.03722072213235208,
+  "rmse": 0.059149095029728725,
+  "r2": 0.9709810008701557
+ },
+ "test": {
+  "n": 3430,
+  "mae": 0.1786486163678014,
+  "rmse": 0.2577111653972133,
+  "r2": 0.94528945295312
+ },
+ "test_inside": {
+  "n": 0
+ },
+ "test_outside": {
+  "n": 3430,
+  "mae": 0.1786486163678014,
+  "rmse": 0.2577111653972133,
+  "r2": 0.94528945295312
+ },
+ "train_range": [
+  -1.4,
+  -0.1
+ ],
+ "frac_true_outside": 1.0,
+ "frac_pred_outside": 0.8795918367346939,
+ "slope_outside": 0.8048695187391454,
+ "seconds": 322.430166721344,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.2613625917802726,
+  "spearman": 0.3627317085724148,
+  "mean_score_inside": null,
+  "mean_score_outside": 0.0627362716395379
+ },
+ "key": "lic/eform/target[-1.4,-0.1]/svr/all",
+ "split_description": "y < -1.4 or y > -0.1 is test",
+ "split_kw": {
+  "lower": -1.4,
+  "upper": -0.1
+ },
+ "n_pool": 5594,
+ "n_test": 3430,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

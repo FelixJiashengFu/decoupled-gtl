@@ -1,0 +1,59 @@
+{
+ "dataset": "aoi",
+ "split": "temporal",
+ "regressor": "svr",
+ "features": [
+  "schnet"
+ ],
+ "best_params": {
+  "C": 1000.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 2261,
+  "mae": 0.1036291122315896,
+  "rmse": 0.15685919735401121,
+  "r2": 0.7495121537799792
+ },
+ "test": {
+  "n": 5539,
+  "mae": 0.3770814581777921,
+  "rmse": 0.8696450864843839,
+  "r2": -0.09437481588171281
+ },
+ "test_inside": {
+  "n": 5060,
+  "mae": 0.160201891100924,
+  "rmse": 0.3312337833930756,
+  "r2": 0.23418731453635333
+ },
+ "test_outside": {
+  "n": 479,
+  "mae": 2.6681265717664195,
+  "rmse": 2.754342612396809,
+  "r2": -13.901790085968575
+ },
+ "train_range": [
+  -1.089973603749999,
+  1.5750217241954028
+ ],
+ "frac_true_outside": 0.08647770355659866,
+ "frac_pred_outside": 0.0,
+ "slope_outside": 0.044046986807404015,
+ "seconds": 6.613533973693848,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": -0.09744750029955054,
+  "spearman": -0.08027528952981428,
+  "mean_score_inside": 0.0014787635872452786,
+  "mean_score_outside": 8.009474860122687e-05
+ },
+ "key": "aoi/eform/temporal/svr/schnet",
+ "split_description": "MP18 -> MP21",
+ "split_kw": {},
+ "n_pool": 2261,
+ "n_test": 5539,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

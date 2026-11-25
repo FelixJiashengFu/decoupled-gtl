@@ -1,0 +1,59 @@
+{
+ "dataset": "lic",
+ "split": "target",
+ "regressor": "svr",
+ "features": [
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 6989,
+  "mae": 0.031211834225616655,
+  "rmse": 0.05483478274481527,
+  "r2": 0.9850950201758312
+ },
+ "test": {
+  "n": 2035,
+  "mae": 0.14664972673950671,
+  "rmse": 0.2026855437252506,
+  "r2": 0.9750916638453223
+ },
+ "test_inside": {
+  "n": 0
+ },
+ "test_outside": {
+  "n": 2035,
+  "mae": 0.14664972673950671,
+  "rmse": 0.2026855437252506,
+  "r2": 0.9750916638453223
+ },
+ "train_range": [
+  -1.6995,
+  0.1
+ ],
+ "frac_true_outside": 1.0,
+ "frac_pred_outside": 0.8004914004914004,
+ "slope_outside": 0.8820602393523639,
+ "seconds": 916.8544561862946,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.4456480943923243,
+  "spearman": 0.4756644608166766,
+  "mean_score_inside": null,
+  "mean_score_outside": 0.09620843833759826
+ },
+ "key": "lic/eform/target/svr/dimenetpp",
+ "split_description": "y < -1.7 or y > 0.1 is test",
+ "split_kw": {
+  "lower": -1.7,
+  "upper": 0.1
+ },
+ "n_pool": 6989,
+ "n_test": 2035,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

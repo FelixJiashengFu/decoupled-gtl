@@ -1,0 +1,54 @@
+{
+ "dataset": "lic",
+ "split": "group",
+ "regressor": "svr_poly",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 1000.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 7248,
+  "mae": 0.09175056818445883,
+  "rmse": 0.13317351576516023,
+  "r2": 0.9619460163198184
+ },
+ "test": {
+  "n": 1776,
+  "mae": 0.08129634183777128,
+  "rmse": 0.11311710648059728,
+  "r2": 0.984263615494342
+ },
+ "test_inside": {
+  "n": 1775,
+  "mae": 0.08113519647632693,
+  "rmse": 0.11281254857068491,
+  "r2": 0.9843264395362414
+ },
+ "test_outside": {
+  "n": 1,
+  "mae": 0.3673293584015037,
+  "rmse": 0.3673293584015037,
+  "r2": NaN
+ },
+ "train_range": [
+  -3.3122,
+  0.9198000000000001
+ ],
+ "frac_true_outside": 0.0005630630630630631,
+ "frac_pred_outside": 0.0005630630630630631,
+ "slope_outside": NaN,
+ "seconds": 1184.3471467494965,
+ "key": "lic/eform/group/svr_poly/all",
+ "split_description": "1/5 of groups held out",
+ "split_kw": {},
+ "n_pool": 7248,
+ "n_test": 1776,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

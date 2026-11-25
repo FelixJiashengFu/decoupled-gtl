@@ -1,0 +1,61 @@
+{
+ "dataset": "lic",
+ "split": "target",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 8102,
+  "mae": 0.15214149989761222,
+  "rmse": 0.256712357669472,
+  "r2": 0.9840138719707402
+ },
+ "test": {
+  "n": 902,
+  "mae": 0.7403806421317255,
+  "rmse": 1.5582023015417423,
+  "r2": 0.9159458347826355
+ },
+ "test_inside": {
+  "n": 0
+ },
+ "test_outside": {
+  "n": 902,
+  "mae": 0.7403806421317255,
+  "rmse": 1.5582023015417423,
+  "r2": 0.9159458347826355
+ },
+ "train_range": [
+  2.50629288,
+  11.0525252
+ ],
+ "frac_true_outside": 1.0,
+ "frac_pred_outside": 0.779379157427938,
+ "slope_outside": 0.8512603441239209,
+ "seconds": 866.5856227874756,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.06342391271522922,
+  "spearman": 0.2731156739924964,
+  "mean_score_inside": null,
+  "mean_score_outside": 0.03414519982127574
+ },
+ "key": "lic/efermi/target/svr/all",
+ "split_description": "y < 2.50476 or y > 11.0558 is test",
+ "split_kw": {
+  "lower": 2.50475761,
+  "upper": 11.0558055285
+ },
+ "n_pool": 8102,
+ "n_test": 902,
+ "target": "efermi",
+ "unit": "eV",
+ "svr_grid": "medium"
+}

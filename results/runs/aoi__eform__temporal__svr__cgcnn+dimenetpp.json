@@ -1,0 +1,60 @@
+{
+ "dataset": "aoi",
+ "split": "temporal",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 10.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 2261,
+  "mae": 0.05172004302435314,
+  "rmse": 0.08086227384469928,
+  "r2": 0.9334330619379052
+ },
+ "test": {
+  "n": 5539,
+  "mae": 0.27823918949372095,
+  "rmse": 0.6989699194034907,
+  "r2": 0.293033284556371
+ },
+ "test_inside": {
+  "n": 5060,
+  "mae": 0.10318197630231243,
+  "rmse": 0.22210850517893838,
+  "r2": 0.6556630057329154
+ },
+ "test_outside": {
+  "n": 479,
+  "mae": 2.1274865772777023,
+  "rmse": 2.2645987273311925,
+  "r2": -9.073607769936542
+ },
+ "train_range": [
+  -1.089973603749999,
+  1.5750217241954028
+ ],
+ "frac_true_outside": 0.08647770355659866,
+ "frac_pred_outside": 0.0,
+ "slope_outside": -0.07323582299773229,
+ "seconds": 15.652986288070679,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.8240358465765091,
+  "spearman": 0.5627122130503025,
+  "mean_score_inside": 0.2058046635331854,
+  "mean_score_outside": 0.8423763470894087
+ },
+ "key": "aoi/eform/temporal/svr/cgcnn+dimenetpp",
+ "split_description": "MP18 -> MP21",
+ "split_kw": {},
+ "n_pool": 2261,
+ "n_test": 5539,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

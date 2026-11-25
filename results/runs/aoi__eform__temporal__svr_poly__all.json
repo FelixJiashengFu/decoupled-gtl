@@ -1,0 +1,54 @@
+{
+ "dataset": "aoi",
+ "split": "temporal",
+ "regressor": "svr_poly",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.02
+ },
+ "oof": {
+  "n": 2261,
+  "mae": 0.053271017386220525,
+  "rmse": 0.0786258014284744,
+  "r2": 0.9370643311277664
+ },
+ "test": {
+  "n": 5539,
+  "mae": 0.10715817985944132,
+  "rmse": 0.21558719547967503,
+  "r2": 0.9327444821242747
+ },
+ "test_inside": {
+  "n": 5060,
+  "mae": 0.07602759546667659,
+  "rmse": 0.1385711243800088,
+  "r2": 0.8659709968751372
+ },
+ "test_outside": {
+  "n": 479,
+  "mae": 0.43601153482267613,
+  "rmse": 0.5784560283688946,
+  "r2": 0.3427308899947461
+ },
+ "train_range": [
+  -1.089973603749999,
+  1.5750217241954028
+ ],
+ "frac_true_outside": 0.08647770355659866,
+ "frac_pred_outside": 0.07907564542336162,
+ "slope_outside": 1.4428751555891373,
+ "seconds": 89.21622681617737,
+ "key": "aoi/eform/temporal/svr_poly/all",
+ "split_description": "MP18 -> MP21",
+ "split_kw": {},
+ "n_pool": 2261,
+ "n_test": 5539,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

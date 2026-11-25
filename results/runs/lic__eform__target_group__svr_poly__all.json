@@ -1,0 +1,57 @@
+{
+ "dataset": "lic",
+ "split": "target_group",
+ "regressor": "svr_poly",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.02
+ },
+ "oof": {
+  "n": 6336,
+  "mae": 0.07071810778471677,
+  "rmse": 0.09917488723068829,
+  "r2": 0.9635134080693316
+ },
+ "test": {
+  "n": 2688,
+  "mae": 0.25596464807577135,
+  "rmse": 0.4759617733993974,
+  "r2": 0.8038595358387097
+ },
+ "test_inside": {
+  "n": 2291,
+  "mae": 0.24350838438121938,
+  "rmse": 0.4689386378435396,
+  "r2": 0.737151323169626
+ },
+ "test_outside": {
+  "n": 397,
+  "mae": 0.32784701614685113,
+  "rmse": 0.5146216630039607,
+  "r2": 0.905181470808514
+ },
+ "train_range": [
+  -2.575,
+  0.3872
+ ],
+ "frac_true_outside": 0.14769345238095238,
+ "frac_pred_outside": 0.17038690476190477,
+ "slope_outside": 0.9978431602852436,
+ "seconds": 905.4653000831604,
+ "key": "lic/eform/target_group/svr_poly/all",
+ "split_description": "groups with any y < -2.6 or y > 0.4 held out",
+ "split_kw": {
+  "lower": -2.6,
+  "upper": 0.4
+ },
+ "n_pool": 6336,
+ "n_test": 2688,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

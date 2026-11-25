@@ -1,0 +1,58 @@
+{
+ "dataset": "lic",
+ "split": "group",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 7188,
+  "mae": 0.4392091142093938,
+  "rmse": 0.761099042478439,
+  "r2": 0.9125132948597333
+ },
+ "test": {
+  "n": 1816,
+  "mae": 0.2643554361305678,
+  "rmse": 0.34539410444455776,
+  "r2": 0.9813898664403173
+ },
+ "test_inside": {
+  "n": 1816,
+  "mae": 0.2643554361305678,
+  "rmse": 0.34539410444455776,
+  "r2": 0.9813898664403173
+ },
+ "test_outside": {
+  "n": 0
+ },
+ "train_range": [
+  -1.43163382,
+  17.77160061
+ ],
+ "frac_true_outside": 0.0,
+ "frac_pred_outside": 0.0,
+ "slope_outside": NaN,
+ "seconds": 617.5124356746674,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.1238181424037521,
+  "spearman": 0.07370230577789061,
+  "mean_score_inside": 0.02400086463478839,
+  "mean_score_outside": null
+ },
+ "key": "lic/efermi/group/svr/all",
+ "split_description": "1/5 of groups held out",
+ "split_kw": {},
+ "n_pool": 7188,
+ "n_test": 1816,
+ "target": "efermi",
+ "unit": "eV",
+ "svr_grid": "medium"
+}

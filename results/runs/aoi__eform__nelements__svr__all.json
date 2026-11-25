@@ -1,0 +1,61 @@
+{
+ "dataset": "aoi",
+ "split": "nelements",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 1000.0,
+  "epsilon": 0.02
+ },
+ "oof": {
+  "n": 3684,
+  "mae": 0.04189819989525714,
+  "rmse": 0.06922090478335738,
+  "r2": 0.9475028306740236
+ },
+ "test": {
+  "n": 4116,
+  "mae": 0.10484127722697,
+  "rmse": 0.18646518183879468,
+  "r2": 0.9634198038194488
+ },
+ "test_inside": {
+  "n": 3951,
+  "mae": 0.10140474374637767,
+  "rmse": 0.1837631670739551,
+  "r2": 0.9379630994439783
+ },
+ "test_outside": {
+  "n": 165,
+  "mae": 0.18713063348042566,
+  "rmse": 0.24232911087153913,
+  "r2": 0.7916574937123095
+ },
+ "train_range": [
+  -1.0889718949999994,
+  2.869360152
+ ],
+ "frac_true_outside": 0.04008746355685131,
+ "frac_pred_outside": 0.047133138969873666,
+ "slope_outside": 0.8007145456788057,
+ "seconds": 100.61887383460999,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.5540928438104875,
+  "spearman": 0.5174550361767946,
+  "mean_score_inside": 0.0401762378898379,
+  "mean_score_outside": 0.18780875751543383
+ },
+ "key": "aoi/eform/nelements/svr/all",
+ "split_description": "train on <= 2 element types",
+ "split_kw": {},
+ "n_pool": 3684,
+ "n_test": 4116,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

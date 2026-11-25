@@ -39,14 +39,39 @@ RMSE alone hides whether a model extrapolates or just lands near the edge of wha
 
 | Experiment | test rows outside range | predictions outside range | slope outside | RMSE inside | RMSE outside |
 |---|---|---|---|---|---|
+| `aoi/eform/nelements/ridge/all` | 4% | 5% | 0.99 | 0.195 | 0.290 |
+| `aoi/eform/nelements/svr/all` | 4% | 5% | 0.80 | 0.184 | 0.242 |
+| `aoi/eform/target[<0.5]/svr/all` | 100% | 84% | 0.46 | – | 0.987 |
+| `aoi/eform/target[<1.0]/svr/all` | 100% | 86% | 0.55 | – | 0.749 |
+| `aoi/eform/temporal/local_ridge/all` | 9% | 5% | 1.15 | 0.177 | 0.727 |
+| `aoi/eform/temporal/local_ridge/matminer` | 9% | 0% | 0.01 | 0.335 | 2.617 |
+| `aoi/eform/temporal/mlp/all` | 9% | 5% | 0.63 | 0.194 | 0.995 |
 | `aoi/eform/temporal/ridge/all` | 9% | 7% | 0.53 | 0.126 | 0.818 |
 | `aoi/eform/temporal/ridge/matminer` | 9% | 0% | 0.12 | 0.368 | 2.928 |
 | `aoi/eform/temporal/svr/all` | 9% | 5% | 0.66 | 0.151 | 0.881 |
 | `aoi/eform/temporal/svr/matminer` | 9% | 0% | 0.10 | 0.240 | 2.262 |
+| `aoi/eform/temporal/svr_linear/all` | 9% | 7% | 0.48 | 0.137 | 0.896 |
+| `aoi/eform/temporal/svr_poly/all` | 9% | 8% | 1.44 | 0.139 | 0.578 |
+| `lic/efermi/target/ridge/all` | 100% | 75% | 0.86 | – | 1.457 |
+| `lic/efermi/target/svr/all` | 100% | 78% | 0.85 | – | 1.558 |
+| `lic/efermi/target_group/ridge/all` | 13% | 4% | 0.68 | 1.036 | 2.852 |
+| `lic/efermi/target_group/svr/all` | 13% | 2% | 0.62 | 1.101 | 3.177 |
+| `lic/eform/target[-1.4,-0.1]/svr/all` | 100% | 88% | 0.80 | – | 0.258 |
+| `lic/eform/target[-2.0,0.3]/svr/all` | 100% | 85% | 0.92 | – | 0.172 |
+| `lic/eform/target/local_ridge/all` | 100% | 72% | 0.80 | – | 0.317 |
+| `lic/eform/target/mlp/all` | 100% | 49% | 0.71 | – | 0.412 |
 | `lic/eform/target/ridge/all` | 100% | 82% | 0.90 | – | 0.190 |
 | `lic/eform/target/svr/all` | 100% | 83% | 0.89 | – | 0.198 |
+| `lic/eform/target/svr_linear/all` | 100% | 81% | 0.90 | – | 0.198 |
+| `lic/eform/target/svr_poly/all` | 100% | 86% | 0.91 | – | 0.181 |
+| `lic/eform/target_group[-2.3,0.3]/svr/all` | 22% | 11% | 0.84 | 0.165 | 0.319 |
+| `lic/eform/target_group[-2.9,0.5]/svr/all` | 10% | 2% | 0.85 | 0.193 | 0.323 |
+| `lic/eform/target_group/local_ridge/all` | 15% | 4% | 0.78 | 0.241 | 0.422 |
+| `lic/eform/target_group/mlp/all` | 15% | 4% | 0.75 | 0.234 | 0.461 |
 | `lic/eform/target_group/ridge/all` | 15% | 18% | 1.01 | 0.620 | 0.651 |
 | `lic/eform/target_group/svr/all` | 15% | 14% | 0.88 | 0.200 | 0.294 |
+| `lic/eform/target_group/svr_linear/all` | 15% | 17% | 1.03 | 0.765 | 0.799 |
+| `lic/eform/target_group/svr_poly/all` | 15% | 17% | 1.00 | 0.469 | 0.515 |
 
 ## Can unreliable predictions be flagged?
 
@@ -54,30 +79,157 @@ Correlation between a label-free diagnostic score and the absolute test error. S
 
 | Experiment | Pearson | Spearman | mean score, inside | mean score, outside |
 |---|---|---|---|---|
+| `aoi/eform/nelements/ridge/all` | 0.45 | 0.35 | 1.429 | 2.541 |
+| `aoi/eform/nelements/svr/all` | 0.55 | 0.52 | 0.040 | 0.188 |
+| `aoi/eform/target[<0.5]/svr/all` | 0.82 | 0.81 | – | 0.190 |
+| `aoi/eform/target[<1.0]/svr/all` | 0.81 | 0.85 | – | 0.119 |
 | `aoi/eform/temporal/ridge/all` | 0.73 | 0.36 | 1.108 | 2.194 |
 | `aoi/eform/temporal/svr/all` | 0.82 | 0.57 | 0.051 | 0.310 |
+| `lic/efermi/group/ridge/all` | 0.12 | 0.07 | 0.442 | – |
+| `lic/efermi/group/svr/all` | 0.12 | 0.07 | 0.024 | – |
+| `lic/efermi/random/ridge/all` | -0.07 | -0.11 | 1.271 | – |
+| `lic/efermi/random/svr/all` | 0.19 | 0.33 | 0.016 | – |
+| `lic/efermi/target/ridge/all` | -0.06 | 0.07 | – | 1.478 |
+| `lic/efermi/target/svr/all` | 0.06 | 0.27 | – | 0.034 |
+| `lic/efermi/target_group/ridge/all` | 0.20 | 0.22 | 1.426 | 1.366 |
+| `lic/efermi/target_group/svr/all` | 0.23 | 0.23 | 0.111 | 0.127 |
 | `lic/eform/group/ridge/all` | 0.08 | 0.07 | 0.186 | 0.217 |
 | `lic/eform/group/svr/all` | 0.24 | 0.18 | 0.028 | 0.041 |
 | `lic/eform/random/ridge/all` | 0.05 | 0.07 | 0.893 | – |
 | `lic/eform/random/svr/all` | 0.49 | 0.33 | 0.017 | – |
+| `lic/eform/target[-1.4,-0.1]/svr/all` | 0.26 | 0.36 | – | 0.063 |
+| `lic/eform/target[-2.0,0.3]/svr/all` | 0.47 | 0.44 | – | 0.037 |
 | `lic/eform/target/ridge/all` | 0.13 | 0.19 | – | 1.356 |
 | `lic/eform/target/svr/all` | 0.32 | 0.40 | – | 0.048 |
+| `lic/eform/target_group[-2.3,0.3]/svr/all` | 0.10 | 0.29 | 0.076 | 0.107 |
+| `lic/eform/target_group[-2.9,0.5]/svr/all` | 0.19 | 0.21 | 0.050 | 0.065 |
 | `lic/eform/target_group/ridge/all` | 0.94 | 0.30 | 0.781 | 0.830 |
 | `lic/eform/target_group/svr/all` | 0.47 | 0.43 | 0.090 | 0.102 |
+
+## Which GNN features matter? (SVR, test RMSE)
+
+| Features | LIC random | LIC group | LIC target | LIC target_group | AOI temporal | AoI outside |
+|---|---|---|---|---|---|---|
+| cgcnn | 0.154 | 0.323 | 0.686 | 0.673 | 0.835 | 2.621 |
+| schnet | 0.128 | 0.210 | 0.370 | 0.301 | 0.870 | 2.754 |
+| dimenetpp | 0.058 | 0.119 | 0.203 | 0.358 | 0.661 | 2.172 |
+| cgcnn+schnet | 0.081 | 0.201 | 0.350 | 0.429 | 0.804 | 2.532 |
+| cgcnn+dimenetpp | 0.057 | 0.124 | 0.270 | 0.348 | 0.699 | 2.265 |
+| schnet+dimenetpp | 0.060 | 0.100 | 0.179 | 0.283 | 0.209 | 0.578 |
+| all | 0.055 | 0.112 | 0.198 | 0.216 | 0.296 | 0.881 |
+
+## Which regressor matters? (3 GNNs, test RMSE)
+
+| Regressor | LIC random | LIC group | LIC target | LIC target_group | AOI temporal | AoI outside |
+|---|---|---|---|---|---|---|
+| svr | 0.055 | 0.112 | 0.198 | 0.216 | 0.296 | 0.881 |
+| ridge | 0.081 | 0.153 | 0.190 | 0.624 | 0.269 | 0.818 |
+| svr_linear | 0.083 | 0.147 | 0.198 | 0.770 | 0.294 | 0.896 |
+| svr_poly | 0.056 | 0.113 | 0.181 | 0.476 | 0.216 | 0.578 |
+| local_ridge | 0.063 | 0.193 | 0.317 | 0.276 | 0.273 | 0.727 |
+| mlp | 0.116 | 0.164 | 0.412 | 0.279 | 0.346 | 0.995 |
+
+## Other extrapolation settings
+
+| Experiment | split | n pool / test | RMSE | RMSE outside | slope outside | R² | paper RMSE |
+|---|---|---|---|---|---|---|---|
+| `aoi/eform/nelements/ridge/all` | train on <= 2 element types | 3684 / 4116 | 0.200 | 0.290 | 0.99 | 0.958 | – |
+| `aoi/eform/nelements/svr/all` | train on <= 2 element types | 3684 / 4116 | 0.186 | 0.242 | 0.80 | 0.963 | – |
+| `aoi/eform/target[<0.5]/svr/all` | y < -inf or y > 0.5 is test | 6842 / 958 | 0.987 | 0.987 | 0.46 | -0.048 | – |
+| `aoi/eform/target[<1.0]/svr/all` | y < -inf or y > 1 is test | 7066 / 734 | 0.749 | 0.749 | 0.55 | 0.262 | – |
+| `lic/efermi/group/ridge/all` | 1/5 of groups held out | 7188 / 1816 | 0.467 | – | – | 0.966 | – |
+| `lic/efermi/group/svr/all` | 1/5 of groups held out | 7188 / 1816 | 0.345 | – | – | 0.981 | 0.502 |
+| `lic/efermi/random/ridge/all` | random 1/5 test | 7204 / 1800 | 0.436 | – | – | 0.971 | – |
+| `lic/efermi/random/svr/all` | random 1/5 test | 7204 / 1800 | 0.375 | – | – | 0.978 | 0.352 |
+| `lic/efermi/target/ridge/all` | y < 2.50476 or y > 11.0558 is test | 8102 / 902 | 1.457 | 1.457 | 0.86 | 0.927 | – |
+| `lic/efermi/target/svr/all` | y < 2.50476 or y > 11.0558 is test | 8102 / 902 | 1.558 | 1.558 | 0.85 | 0.916 | 1.269 |
+| `lic/efermi/target_group/ridge/all` | groups with any y < 0.906504 or y > 12.6791 held out | 7324 / 1680 | 1.405 | 2.852 | 0.68 | 0.867 | – |
+| `lic/efermi/target_group/svr/all` | groups with any y < 0.906504 or y > 12.6791 held out | 7324 / 1680 | 1.531 | 3.177 | 0.62 | 0.843 | 1.200 |
+| `lic/eform/target[-1.4,-0.1]/svr/all` | y < -1.4 or y > -0.1 is test | 5594 / 3430 | 0.258 | 0.258 | 0.80 | 0.945 | – |
+| `lic/eform/target[-2.0,0.3]/svr/all` | y < -2 or y > 0.3 is test | 8009 / 1015 | 0.172 | 0.172 | 0.92 | 0.986 | – |
+| `lic/eform/target_group[-2.3,0.3]/svr/all` | groups with any y < -2.3 or y > 0.3 held out | 5328 / 3696 | 0.208 | 0.319 | 0.84 | 0.955 | – |
+| `lic/eform/target_group[-2.9,0.5]/svr/all` | groups with any y < -2.9 or y > 0.5 held out | 7248 / 1776 | 0.209 | 0.323 | 0.85 | 0.968 | – |
 
 ## Selected hyperparameters
 
 | Experiment | best | OOF RMSE | seconds |
 |---|---|---|---|
+| `aoi/eform/nelements/ridge/all` | `{"alpha": 0.05}` | 0.077 | 18 |
+| `aoi/eform/nelements/svr/all` | `{"C": 1000.0, "epsilon": 0.02}` | 0.069 | 101 |
+| `aoi/eform/target[<0.5]/svr/all` | `{"C": 100.0, "epsilon": 0.02}` | 0.047 | 525 |
+| `aoi/eform/target[<1.0]/svr/all` | `{"C": 1000.0, "epsilon": 0.02}` | 0.053 | 635 |
+| `aoi/eform/temporal/local_ridge/all` | `{"n_neighbors": 140, "alpha": 0.2}` | 0.095 | 39 |
+| `aoi/eform/temporal/local_ridge/matminer` | `{"n_neighbors": 130, "alpha": 0.15000000000000002}` | 0.134 | 32 |
+| `aoi/eform/temporal/mlp/all` | `{}` | 0.101 | 378 |
 | `aoi/eform/temporal/ridge/all` | `{"alpha": 0.05}` | 0.086 | 12 |
 | `aoi/eform/temporal/ridge/matminer` | `{"alpha": 0.15000000000000002}` | 0.173 | 1 |
 | `aoi/eform/temporal/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.076 | 71 |
+| `aoi/eform/temporal/svr/cgcnn+dimenetpp` | `{"C": 10.0, "epsilon": 0.0}` | 0.081 | 16 |
+| `aoi/eform/temporal/svr/cgcnn+schnet` | `{"C": 1000.0, "epsilon": 0.0}` | 0.159 | 46 |
+| `aoi/eform/temporal/svr/cgcnn` | `{"C": 1000.0, "epsilon": 0.0}` | 0.177 | 8 |
+| `aoi/eform/temporal/svr/dimenetpp` | `{"C": 100.0, "epsilon": 0.02}` | 0.061 | 92 |
 | `aoi/eform/temporal/svr/matminer` | `{"C": 31.622776601683793, "epsilon": 0.02}` | 0.112 | 81 |
+| `aoi/eform/temporal/svr/schnet+dimenetpp` | `{"C": 1000.0, "epsilon": 0.02}` | 0.059 | 90 |
+| `aoi/eform/temporal/svr/schnet` | `{"C": 1000.0, "epsilon": 0.0}` | 0.157 | 7 |
+| `aoi/eform/temporal/svr_linear/all` | `{"C": 10.0, "epsilon": 0.02}` | 0.088 | 359 |
+| `aoi/eform/temporal/svr_poly/all` | `{"C": 100.0, "epsilon": 0.02}` | 0.079 | 89 |
+| `lic/efermi/group/ridge/all` | `{"alpha": 1.35}` | 0.833 | 18 |
+| `lic/efermi/group/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.761 | 618 |
+| `lic/efermi/random/ridge/all` | `{"alpha": 0.05}` | 0.496 | 18 |
+| `lic/efermi/random/svr/all` | `{"C": 1000.0, "epsilon": 0.0}` | 0.438 | 726 |
+| `lic/efermi/target/ridge/all` | `{"alpha": 0.05}` | 0.327 | 17 |
+| `lic/efermi/target/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.257 | 867 |
+| `lic/efermi/target_group/ridge/all` | `{"alpha": 0.05}` | 0.438 | 17 |
+| `lic/efermi/target_group/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.396 | 699 |
+| `lic/eform/group/local_ridge/all` | `{"n_neighbors": 40, "alpha": 0.05}` | 0.221 | 27 |
+| `lic/eform/group/mlp/all` | `{}` | 0.182 | 726 |
 | `lic/eform/group/ridge/all` | `{"alpha": 10.0}` | 0.207 | 17 |
 | `lic/eform/group/svr/all` | `{"C": 316.2277660168379, "epsilon": 0.02}` | 0.131 | 1000 |
+| `lic/eform/group/svr/cgcnn+dimenetpp` | `{"C": 10.0, "epsilon": 0.0}` | 0.133 | 236 |
+| `lic/eform/group/svr/cgcnn+schnet` | `{"C": 1000.0, "epsilon": 0.0}` | 0.210 | 936 |
+| `lic/eform/group/svr/cgcnn` | `{"C": 1000.0, "epsilon": 0.0}` | 0.295 | 203 |
+| `lic/eform/group/svr/dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.129 | 998 |
+| `lic/eform/group/svr/schnet+dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.164 | 1255 |
+| `lic/eform/group/svr/schnet` | `{"C": 1000.0, "epsilon": 0.02}` | 0.210 | 144 |
+| `lic/eform/group/svr_linear/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.292 | 1454 |
+| `lic/eform/group/svr_poly/all` | `{"C": 1000.0, "epsilon": 0.0}` | 0.133 | 1184 |
+| `lic/eform/random/local_ridge/all` | `{"n_neighbors": 190, "alpha": 0.15000000000000002}` | 0.074 | 64 |
+| `lic/eform/random/mlp/all` | `{}` | 0.125 | 738 |
 | `lic/eform/random/ridge/all` | `{"alpha": 0.05}` | 0.089 | 17 |
 | `lic/eform/random/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.063 | 1050 |
+| `lic/eform/random/svr/cgcnn+dimenetpp` | `{"C": 10.0, "epsilon": 0.0}` | 0.065 | 212 |
+| `lic/eform/random/svr/cgcnn+schnet` | `{"C": 1000.0, "epsilon": 0.0}` | 0.096 | 887 |
+| `lic/eform/random/svr/cgcnn` | `{"C": 100.0, "epsilon": 0.0}` | 0.155 | 186 |
+| `lic/eform/random/svr/dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.061 | 906 |
+| `lic/eform/random/svr/schnet+dimenetpp` | `{"C": 1000.0, "epsilon": 0.02}` | 0.064 | 1382 |
+| `lic/eform/random/svr/schnet` | `{"C": 1000.0, "epsilon": 0.02}` | 0.139 | 151 |
+| `lic/eform/random/svr_linear/all` | `{"C": 10.0, "epsilon": 0.02}` | 0.098 | 1380 |
+| `lic/eform/random/svr_poly/all` | `{"C": 10.0, "epsilon": 0.0}` | 0.065 | 1203 |
+| `lic/eform/target[-1.4,-0.1]/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.059 | 322 |
+| `lic/eform/target[-2.0,0.3]/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.057 | 846 |
+| `lic/eform/target/local_ridge/all` | `{"n_neighbors": 110, "alpha": 0.1}` | 0.066 | 40 |
+| `lic/eform/target/mlp/all` | `{}` | 0.102 | 915 |
 | `lic/eform/target/ridge/all` | `{"alpha": 0.05}` | 0.079 | 20 |
 | `lic/eform/target/svr/all` | `{"C": 316.2277660168379, "epsilon": 0.0}` | 0.056 | 1110 |
+| `lic/eform/target/svr/cgcnn+dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.057 | 235 |
+| `lic/eform/target/svr/cgcnn+schnet` | `{"C": 1000.0, "epsilon": 0.0}` | 0.082 | 768 |
+| `lic/eform/target/svr/cgcnn` | `{"C": 100.0, "epsilon": 0.0}` | 0.117 | 188 |
+| `lic/eform/target/svr/dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.055 | 917 |
+| `lic/eform/target/svr/schnet+dimenetpp` | `{"C": 1000.0, "epsilon": 0.0}` | 0.055 | 1646 |
+| `lic/eform/target/svr/schnet` | `{"C": 1000.0, "epsilon": 0.02}` | 0.119 | 110 |
+| `lic/eform/target/svr_linear/all` | `{"C": 10.0, "epsilon": 0.02}` | 0.084 | 1377 |
+| `lic/eform/target/svr_poly/all` | `{"C": 100.0, "epsilon": 0.02}` | 0.059 | 1072 |
+| `lic/eform/target_group[-2.3,0.3]/svr/all` | `{"C": 100.0, "epsilon": 0.02}` | 0.115 | 266 |
+| `lic/eform/target_group[-2.9,0.5]/svr/all` | `{"C": 10.0, "epsilon": 0.02}` | 0.119 | 538 |
+| `lic/eform/target_group/local_ridge/all` | `{"n_neighbors": 190, "alpha": 0.30000000000000004}` | 0.125 | 66 |
+| `lic/eform/target_group/mlp/all` | `{}` | 0.142 | 754 |
 | `lic/eform/target_group/ridge/all` | `{"alpha": 0.15000000000000002}` | 0.128 | 16 |
 | `lic/eform/target_group/svr/all` | `{"C": 100.0, "epsilon": 0.0}` | 0.098 | 786 |
+| `lic/eform/target_group/svr/cgcnn+dimenetpp` | `{"C": 10.0, "epsilon": 0.0}` | 0.104 | 172 |
+| `lic/eform/target_group/svr/cgcnn+schnet` | `{"C": 1000.0, "epsilon": 0.02}` | 0.147 | 513 |
+| `lic/eform/target_group/svr/cgcnn` | `{"C": 100.0, "epsilon": 0.0}` | 0.193 | 158 |
+| `lic/eform/target_group/svr/dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.109 | 721 |
+| `lic/eform/target_group/svr/schnet+dimenetpp` | `{"C": 100.0, "epsilon": 0.0}` | 0.100 | 878 |
+| `lic/eform/target_group/svr/schnet` | `{"C": 1000.0, "epsilon": 0.02}` | 0.169 | 94 |
+| `lic/eform/target_group/svr_linear/all` | `{"C": 10.0, "epsilon": 0.02}` | 0.139 | 1198 |
+| `lic/eform/target_group/svr_poly/all` | `{"C": 100.0, "epsilon": 0.02}` | 0.099 | 905 |

@@ -1,0 +1,60 @@
+{
+ "dataset": "aoi",
+ "split": "target",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.02
+ },
+ "oof": {
+  "n": 6842,
+  "mae": 0.030262155002794132,
+  "rmse": 0.047377755787803545,
+  "r2": 0.9657284304006419
+ },
+ "test": {
+  "n": 958,
+  "mae": 0.8168889116343417,
+  "rmse": 0.9873735186054868,
+  "r2": -0.048363308114676595
+ },
+ "test_inside": {
+  "n": 0
+ },
+ "test_outside": {
+  "n": 958,
+  "mae": 0.8168889116343417,
+  "rmse": 0.9873735186054868,
+  "r2": -0.048363308114676595
+ },
+ "train_range": [
+  -1.089973603749999,
+  0.4995489851666668
+ ],
+ "frac_true_outside": 1.0,
+ "frac_pred_outside": 0.8444676409185804,
+ "slope_outside": 0.4550896469243325,
+ "seconds": 524.6558623313904,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.8210573958517974,
+  "spearman": 0.8090015857451265,
+  "mean_score_inside": null,
+  "mean_score_outside": 0.1895506308809006
+ },
+ "key": "aoi/eform/target[<0.5]/svr/all",
+ "split_description": "y < -inf or y > 0.5 is test",
+ "split_kw": {
+  "upper": 0.5
+ },
+ "n_pool": 6842,
+ "n_test": 958,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}

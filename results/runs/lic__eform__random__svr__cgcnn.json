@@ -1,0 +1,56 @@
+{
+ "dataset": "lic",
+ "split": "random",
+ "regressor": "svr",
+ "features": [
+  "cgcnn"
+ ],
+ "best_params": {
+  "C": 100.0,
+  "epsilon": 0.0
+ },
+ "oof": {
+  "n": 7220,
+  "mae": 0.10496795570107764,
+  "rmse": 0.1554081993840636,
+  "r2": 0.9546093206287285
+ },
+ "test": {
+  "n": 1804,
+  "mae": 0.09822659047982644,
+  "rmse": 0.1535149730207192,
+  "r2": 0.9572804036804915
+ },
+ "test_inside": {
+  "n": 1804,
+  "mae": 0.09822659047982644,
+  "rmse": 0.1535149730207192,
+  "r2": 0.9572804036804915
+ },
+ "test_outside": {
+  "n": 0
+ },
+ "train_range": [
+  -3.3122,
+  0.92375
+ ],
+ "frac_true_outside": 0.0,
+ "frac_pred_outside": 0.0,
+ "slope_outside": NaN,
+ "seconds": 185.9870743751526,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.2961578342147824,
+  "spearman": 0.371922122249668,
+  "mean_score_inside": 0.13870118564294356,
+  "mean_score_outside": null
+ },
+ "key": "lic/eform/random/svr/cgcnn",
+ "split_description": "random 1/5 test",
+ "split_kw": {},
+ "n_pool": 7220,
+ "n_test": 1804,
+ "target": "eform",
+ "unit": "eV/atom",
+ "svr_grid": "medium"
+}
