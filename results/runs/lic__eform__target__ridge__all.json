@@ -1,0 +1,59 @@
+{
+ "dataset": "lic",
+ "split": "target",
+ "regressor": "ridge",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "alpha": 0.05
+ },
+ "oof": {
+  "n": 6989,
+  "mae": 0.05650556725298945,
+  "rmse": 0.079479324171996,
+  "r2": 0.9686867987405162
+ },
+ "test": {
+  "n": 2035,
+  "mae": 0.1462001864275512,
+  "rmse": 0.18950709195091314,
+  "r2": 0.9782254040949657
+ },
+ "test_inside": {
+  "n": 0
+ },
+ "test_outside": {
+  "n": 2035,
+  "mae": 0.1462001864275512,
+  "rmse": 0.18950709195091314,
+  "r2": 0.9782254040949657
+ },
+ "train_range": [
+  -1.6995,
+  0.1
+ ],
+ "frac_true_outside": 1.0,
+ "frac_pred_outside": 0.8196560196560196,
+ "slope_outside": 0.9046842677624727,
+ "seconds": 19.54332995414734,
+ "diagnostic": {
+  "name": "max |x_j w_j|",
+  "pearson": 0.13317723072169904,
+  "spearman": 0.19295362121830817,
+  "mean_score_inside": null,
+  "mean_score_outside": 1.3555208560061303
+ },
+ "key": "lic/eform/target/ridge/all",
+ "split_description": "y < -1.7 or y > 0.1 is test",
+ "split_kw": {
+  "lower": -1.7,
+  "upper": 0.1
+ },
+ "n_pool": 6989,
+ "n_test": 2035,
+ "target": "eform",
+ "unit": "eV/atom"
+}

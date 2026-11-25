@@ -1,0 +1,56 @@
+{
+ "dataset": "lic",
+ "split": "random",
+ "regressor": "ridge",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "alpha": 0.05
+ },
+ "oof": {
+  "n": 7220,
+  "mae": 0.06352094071365876,
+  "rmse": 0.08901017654403644,
+  "r2": 0.9851098816151812
+ },
+ "test": {
+  "n": 1804,
+  "mae": 0.05898622759925803,
+  "rmse": 0.08113697826667592,
+  "r2": 0.9880666241855293
+ },
+ "test_inside": {
+  "n": 1804,
+  "mae": 0.05898622759925803,
+  "rmse": 0.08113697826667592,
+  "r2": 0.9880666241855293
+ },
+ "test_outside": {
+  "n": 0
+ },
+ "train_range": [
+  -3.3122,
+  0.92375
+ ],
+ "frac_true_outside": 0.0,
+ "frac_pred_outside": 0.0,
+ "slope_outside": NaN,
+ "seconds": 17.2700777053833,
+ "diagnostic": {
+  "name": "max |x_j w_j|",
+  "pearson": 0.05238459401122223,
+  "spearman": 0.07167076560123599,
+  "mean_score_inside": 0.8933969264207721,
+  "mean_score_outside": null
+ },
+ "key": "lic/eform/random/ridge/all",
+ "split_description": "random 1/5 test",
+ "split_kw": {},
+ "n_pool": 7220,
+ "n_test": 1804,
+ "target": "eform",
+ "unit": "eV/atom"
+}

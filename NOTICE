@@ -1,0 +1,21 @@
+This is an independent re-implementation of the method described in
+
+  T. Sugiura and T. Mizoguchi, "Achieving Robust Extrapolation in Materials Property
+  Prediction via Decoupled Transfer Learning", PRX Intelligence 1, 023019 (2026),
+  https://doi.org/10.1103/pbrg-x848  (CC BY 4.0)
+
+The code here was written from the paper's description. No source file is copied from
+the authors' repository (https://github.com/nmdl-mizo/decoupled-gnn-transfer-learning).
+
+Data (downloaded by scripts/fetch_data.sh, not redistributed here)
+  - Layered intercalation compounds: Kawaguchi et al., Sci. Data 11, 1244 (2024), CC BY 4.0.
+  - Alloys of Interest: Li et al., npj Comput. Mater. 9, 55 (2023); Materials Project, CC BY 4.0.
+  - Precomputed GNN embeddings: Sugiura and Mizoguchi (2026), CC BY 4.0.
+  Files under results/ are derived from these and carry the same attribution.
+
+Third-party material in this repository
+  - dgtl/extract/cgcnn_atom_init.json: element descriptors from CGCNN
+    (https://github.com/txie-93/cgcnn, MIT License, Copyright (c) 2018 Tian Xie).
+  - The network layouts in dgtl/extract/models.py follow the Open Catalyst Project
+    S2EF baselines (MIT License, Copyright (c) Facebook, Inc. and its affiliates) so that
+    the released OC20 checkpoints load; SchNet and DimeNet++ are used from PyTorch Geometric.

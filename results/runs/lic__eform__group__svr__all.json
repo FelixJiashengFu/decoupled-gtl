@@ -1,0 +1,60 @@
+{
+ "dataset": "lic",
+ "split": "group",
+ "regressor": "svr",
+ "features": [
+  "cgcnn",
+  "schnet",
+  "dimenetpp"
+ ],
+ "best_params": {
+  "C": 316.2277660168379,
+  "epsilon": 0.02
+ },
+ "oof": {
+  "n": 7248,
+  "mae": 0.09093844516589426,
+  "rmse": 0.1313949855679176,
+  "r2": 0.9629556498792692
+ },
+ "test": {
+  "n": 1776,
+  "mae": 0.07978361196425277,
+  "rmse": 0.11175494415749623,
+  "r2": 0.9846403303335324
+ },
+ "test_inside": {
+  "n": 1775,
+  "mae": 0.07963193607490192,
+  "rmse": 0.11147905696873245,
+  "r2": 0.9846947856966256
+ },
+ "test_outside": {
+  "n": 1,
+  "mae": 0.3490083155620173,
+  "rmse": 0.3490083155620173,
+  "r2": NaN
+ },
+ "train_range": [
+  -3.3122,
+  0.9198000000000001
+ ],
+ "frac_true_outside": 0.0005630630630630631,
+ "frac_pred_outside": 0.0,
+ "slope_outside": NaN,
+ "seconds": 1000.0149121284485,
+ "diagnostic": {
+  "name": "1 - max RBF similarity to training set",
+  "pearson": 0.2370354443363198,
+  "spearman": 0.1808925343265543,
+  "mean_score_inside": 0.02765490736395342,
+  "mean_score_outside": 0.04101076827128852
+ },
+ "key": "lic/eform/group/svr/all",
+ "split_description": "1/5 of groups held out",
+ "split_kw": {},
+ "n_pool": 7248,
+ "n_test": 1776,
+ "target": "eform",
+ "unit": "eV/atom"
+}

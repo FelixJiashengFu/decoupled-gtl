@@ -1,0 +1,712 @@
+{
+ "aoi/eform/temporal/ridge/all": {
+  "dataset": "aoi",
+  "split": "temporal",
+  "regressor": "ridge",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "alpha": 0.05
+  },
+  "oof": {
+   "n": 2261,
+   "mae": 0.06023975820637449,
+   "rmse": 0.08649606406753384,
+   "r2": 0.9238343113408064
+  },
+  "test": {
+   "n": 5539,
+   "mae": 0.13041615752856714,
+   "rmse": 0.2690153463924985,
+   "r2": 0.8952784391339145
+  },
+  "test_inside": {
+   "n": 5060,
+   "mae": 0.07710722138806557,
+   "rmse": 0.12586175328781846,
+   "r2": 0.8894290960152833
+  },
+  "test_outside": {
+   "n": 479,
+   "mae": 0.6935543973426337,
+   "rmse": 0.8182380080543442,
+   "r2": -0.31510920423992994
+  },
+  "train_range": [
+   -1.089973603749999,
+   1.5750217241954028
+  ],
+  "frac_true_outside": 0.08647770355659866,
+  "frac_pred_outside": 0.07095143527712583,
+  "slope_outside": 0.5268415414486928,
+  "seconds": 11.74519157409668,
+  "diagnostic": {
+   "name": "max |x_j w_j|",
+   "pearson": 0.7301890936459472,
+   "spearman": 0.35738983569396415,
+   "mean_score_inside": 1.1080002202598302,
+   "mean_score_outside": 2.1936319345921746
+  },
+  "key": "aoi/eform/temporal/ridge/all",
+  "split_description": "MP18 -> MP21",
+  "split_kw": {},
+  "n_pool": 2261,
+  "n_test": 5539,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "aoi/eform/temporal/ridge/matminer": {
+  "dataset": "aoi",
+  "split": "temporal",
+  "regressor": "ridge",
+  "features": [
+   "matminer"
+  ],
+  "best_params": {
+   "alpha": 0.15000000000000002
+  },
+  "oof": {
+   "n": 2259,
+   "mae": 0.12545659512313556,
+   "rmse": 0.17260060241677197,
+   "r2": 0.6969750436451123
+  },
+  "test": {
+   "n": 5515,
+   "mae": 0.425482208045324,
+   "rmse": 0.9283496849731033,
+   "r2": -0.25178435502749186
+  },
+  "test_inside": {
+   "n": 5040,
+   "mae": 0.19687740523436228,
+   "rmse": 0.3676533796061692,
+   "r2": 0.04712501624663068
+  },
+  "test_outside": {
+   "n": 475,
+   "mae": 2.8510994841868964,
+   "rmse": 2.927818644019128,
+   "r2": -15.805865550749779
+  },
+  "train_range": [
+   -1.089973603749999,
+   1.5750217241954028
+  ],
+  "frac_true_outside": 0.08612873980054397,
+  "frac_pred_outside": 0.0,
+  "slope_outside": 0.11974475864567996,
+  "seconds": 0.612375020980835,
+  "diagnostic": {
+   "name": "max |x_j w_j|",
+   "pearson": 0.06150424219080715,
+   "spearman": -0.038884992965424234,
+   "mean_score_inside": 2.5772529931472246,
+   "mean_score_outside": 2.6498951273832922
+  },
+  "key": "aoi/eform/temporal/ridge/matminer",
+  "split_description": "MP18 -> MP21",
+  "split_kw": {},
+  "n_pool": 2259,
+  "n_test": 5515,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "aoi/eform/temporal/svr/all": {
+  "dataset": "aoi",
+  "split": "temporal",
+  "regressor": "svr",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "C": 100.0,
+   "epsilon": 0.0
+  },
+  "oof": {
+   "n": 2261,
+   "mae": 0.05065718183181338,
+   "rmse": 0.07631966600858789,
+   "r2": 0.940702060313149
+  },
+  "test": {
+   "n": 5539,
+   "mae": 0.14253836568323205,
+   "rmse": 0.2964553767301812,
+   "r2": 0.8728253186381162
+  },
+  "test_inside": {
+   "n": 5060,
+   "mae": 0.08021676967365417,
+   "rmse": 0.15072036073612877,
+   "r2": 0.8414387154716411
+  },
+  "test_outside": {
+   "n": 479,
+   "mae": 0.8008834091247018,
+   "rmse": 0.8810854707627235,
+   "r2": -0.5248902886307376
+  },
+  "train_range": [
+   -1.089973603749999,
+   1.5750217241954028
+  ],
+  "frac_true_outside": 0.08647770355659866,
+  "frac_pred_outside": 0.05199494493590901,
+  "slope_outside": 0.6550143122504627,
+  "seconds": 71.46952176094055,
+  "diagnostic": {
+   "name": "1 - max RBF similarity to training set",
+   "pearson": 0.8221210772602163,
+   "spearman": 0.5661426468816535,
+   "mean_score_inside": 0.051137274744364754,
+   "mean_score_outside": 0.30959527766671757
+  },
+  "key": "aoi/eform/temporal/svr/all",
+  "split_description": "MP18 -> MP21",
+  "split_kw": {},
+  "n_pool": 2261,
+  "n_test": 5539,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "aoi/eform/temporal/svr/matminer": {
+  "dataset": "aoi",
+  "split": "temporal",
+  "regressor": "svr",
+  "features": [
+   "matminer"
+  ],
+  "best_params": {
+   "C": 31.622776601683793,
+   "epsilon": 0.02
+  },
+  "oof": {
+   "n": 2259,
+   "mae": 0.06964943886476835,
+   "rmse": 0.112092087894328,
+   "r2": 0.8721962195932728
+  },
+  "test": {
+   "n": 5515,
+   "mae": 0.2974165535643514,
+   "rmse": 0.7022750891368539,
+   "r2": 0.28365726995931984
+  },
+  "test_inside": {
+   "n": 5040,
+   "mae": 0.12265171419919499,
+   "rmse": 0.23984979957331287,
+   "r2": 0.5944564298388202
+  },
+  "test_outside": {
+   "n": 475,
+   "mae": 2.151763480723064,
+   "rmse": 2.2618128547476406,
+   "r2": -9.029652284059932
+  },
+  "train_range": [
+   -1.089973603749999,
+   1.5750217241954028
+  ],
+  "frac_true_outside": 0.08612873980054397,
+  "frac_pred_outside": 0.0,
+  "slope_outside": 0.09816134108947741,
+  "seconds": 81.07844567298889,
+  "diagnostic": {
+   "name": "1 - max RBF similarity to training set",
+   "pearson": 0.6302203568350191,
+   "spearman": 0.5245157163455526,
+   "mean_score_inside": 0.12687740191352231,
+   "mean_score_outside": 0.35414536246614287
+  },
+  "key": "aoi/eform/temporal/svr/matminer",
+  "split_description": "MP18 -> MP21",
+  "split_kw": {},
+  "n_pool": 2259,
+  "n_test": 5515,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/group/ridge/all": {
+  "dataset": "lic",
+  "split": "group",
+  "regressor": "ridge",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "alpha": 10.0
+  },
+  "oof": {
+   "n": 7248,
+   "mae": 0.14199685063499967,
+   "rmse": 0.20748136872576553,
+   "r2": 0.9076317733580057
+  },
+  "test": {
+   "n": 1776,
+   "mae": 0.11634653656580757,
+   "rmse": 0.15349857495015626,
+   "r2": 0.9710227558675403
+  },
+  "test_inside": {
+   "n": 1775,
+   "mae": 0.11610044967202672,
+   "rmse": 0.15297943016127258,
+   "r2": 0.9711783446736344
+  },
+  "test_outside": {
+   "n": 1,
+   "mae": 0.5531507730267796,
+   "rmse": 0.5531507730267796,
+   "r2": NaN
+  },
+  "train_range": [
+   -3.3122,
+   0.9198000000000001
+  ],
+  "frac_true_outside": 0.0005630630630630631,
+  "frac_pred_outside": 0.0011261261261261261,
+  "slope_outside": NaN,
+  "seconds": 16.923293113708496,
+  "diagnostic": {
+   "name": "max |x_j w_j|",
+   "pearson": 0.08015539618431332,
+   "spearman": 0.0743852924234482,
+   "mean_score_inside": 0.18561725965718062,
+   "mean_score_outside": 0.21735712538544
+  },
+  "key": "lic/eform/group/ridge/all",
+  "split_description": "1/5 of groups held out",
+  "split_kw": {},
+  "n_pool": 7248,
+  "n_test": 1776,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/group/svr/all": {
+  "dataset": "lic",
+  "split": "group",
+  "regressor": "svr",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "C": 316.2277660168379,
+   "epsilon": 0.02
+  },
+  "oof": {
+   "n": 7248,
+   "mae": 0.09093844516589426,
+   "rmse": 0.1313949855679176,
+   "r2": 0.9629556498792692
+  },
+  "test": {
+   "n": 1776,
+   "mae": 0.07978361196425277,
+   "rmse": 0.11175494415749623,
+   "r2": 0.9846403303335324
+  },
+  "test_inside": {
+   "n": 1775,
+   "mae": 0.07963193607490192,
+   "rmse": 0.11147905696873245,
+   "r2": 0.9846947856966256
+  },
+  "test_outside": {
+   "n": 1,
+   "mae": 0.3490083155620173,
+   "rmse": 0.3490083155620173,
+   "r2": NaN
+  },
+  "train_range": [
+   -3.3122,
+   0.9198000000000001
+  ],
+  "frac_true_outside": 0.0005630630630630631,
+  "frac_pred_outside": 0.0,
+  "slope_outside": NaN,
+  "seconds": 1000.0149121284485,
+  "diagnostic": {
+   "name": "1 - max RBF similarity to training set",
+   "pearson": 0.2370354443363198,
+   "spearman": 0.1808925343265543,
+   "mean_score_inside": 0.02765490736395342,
+   "mean_score_outside": 0.04101076827128852
+  },
+  "key": "lic/eform/group/svr/all",
+  "split_description": "1/5 of groups held out",
+  "split_kw": {},
+  "n_pool": 7248,
+  "n_test": 1776,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/random/ridge/all": {
+  "dataset": "lic",
+  "split": "random",
+  "regressor": "ridge",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "alpha": 0.05
+  },
+  "oof": {
+   "n": 7220,
+   "mae": 0.06352094071365876,
+   "rmse": 0.08901017654403644,
+   "r2": 0.9851098816151812
+  },
+  "test": {
+   "n": 1804,
+   "mae": 0.05898622759925803,
+   "rmse": 0.08113697826667592,
+   "r2": 0.9880666241855293
+  },
+  "test_inside": {
+   "n": 1804,
+   "mae": 0.05898622759925803,
+   "rmse": 0.08113697826667592,
+   "r2": 0.9880666241855293
+  },
+  "test_outside": {
+   "n": 0
+  },
+  "train_range": [
+   -3.3122,
+   0.92375
+  ],
+  "frac_true_outside": 0.0,
+  "frac_pred_outside": 0.0,
+  "slope_outside": NaN,
+  "seconds": 17.2700777053833,
+  "diagnostic": {
+   "name": "max |x_j w_j|",
+   "pearson": 0.05238459401122223,
+   "spearman": 0.07167076560123599,
+   "mean_score_inside": 0.8933969264207721,
+   "mean_score_outside": null
+  },
+  "key": "lic/eform/random/ridge/all",
+  "split_description": "random 1/5 test",
+  "split_kw": {},
+  "n_pool": 7220,
+  "n_test": 1804,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/random/svr/all": {
+  "dataset": "lic",
+  "split": "random",
+  "regressor": "svr",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "C": 100.0,
+   "epsilon": 0.0
+  },
+  "oof": {
+   "n": 7220,
+   "mae": 0.03974560995696383,
+   "rmse": 0.06250859820348771,
+   "r2": 0.9926565803860873
+  },
+  "test": {
+   "n": 1804,
+   "mae": 0.034942951896335735,
+   "rmse": 0.05452105528714323,
+   "r2": 0.99461167024937
+  },
+  "test_inside": {
+   "n": 1804,
+   "mae": 0.034942951896335735,
+   "rmse": 0.05452105528714323,
+   "r2": 0.99461167024937
+  },
+  "test_outside": {
+   "n": 0
+  },
+  "train_range": [
+   -3.3122,
+   0.92375
+  ],
+  "frac_true_outside": 0.0,
+  "frac_pred_outside": 0.0,
+  "slope_outside": NaN,
+  "seconds": 1049.8894231319427,
+  "diagnostic": {
+   "name": "1 - max RBF similarity to training set",
+   "pearson": 0.48506124737764295,
+   "spearman": 0.33083756835286426,
+   "mean_score_inside": 0.017071056580305808,
+   "mean_score_outside": null
+  },
+  "key": "lic/eform/random/svr/all",
+  "split_description": "random 1/5 test",
+  "split_kw": {},
+  "n_pool": 7220,
+  "n_test": 1804,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/target/ridge/all": {
+  "dataset": "lic",
+  "split": "target",
+  "regressor": "ridge",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "alpha": 0.05
+  },
+  "oof": {
+   "n": 6989,
+   "mae": 0.05650556725298945,
+   "rmse": 0.079479324171996,
+   "r2": 0.9686867987405162
+  },
+  "test": {
+   "n": 2035,
+   "mae": 0.1462001864275512,
+   "rmse": 0.18950709195091314,
+   "r2": 0.9782254040949657
+  },
+  "test_inside": {
+   "n": 0
+  },
+  "test_outside": {
+   "n": 2035,
+   "mae": 0.1462001864275512,
+   "rmse": 0.18950709195091314,
+   "r2": 0.9782254040949657
+  },
+  "train_range": [
+   -1.6995,
+   0.1
+  ],
+  "frac_true_outside": 1.0,
+  "frac_pred_outside": 0.8196560196560196,
+  "slope_outside": 0.9046842677624727,
+  "seconds": 19.54332995414734,
+  "diagnostic": {
+   "name": "max |x_j w_j|",
+   "pearson": 0.13317723072169904,
+   "spearman": 0.19295362121830817,
+   "mean_score_inside": null,
+   "mean_score_outside": 1.3555208560061303
+  },
+  "key": "lic/eform/target/ridge/all",
+  "split_description": "y < -1.7 or y > 0.1 is test",
+  "split_kw": {
+   "lower": -1.7,
+   "upper": 0.1
+  },
+  "n_pool": 6989,
+  "n_test": 2035,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/target/svr/all": {
+  "dataset": "lic",
+  "split": "target",
+  "regressor": "svr",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "C": 316.2277660168379,
+   "epsilon": 0.0
+  },
+  "oof": {
+   "n": 6989,
+   "mae": 0.035257537207225784,
+   "rmse": 0.05569138457462908,
+   "r2": 0.984625706460427
+  },
+  "test": {
+   "n": 2035,
+   "mae": 0.14436858317279225,
+   "rmse": 0.19802187087302817,
+   "r2": 0.9762247283273624
+  },
+  "test_inside": {
+   "n": 0
+  },
+  "test_outside": {
+   "n": 2035,
+   "mae": 0.14436858317279225,
+   "rmse": 0.19802187087302817,
+   "r2": 0.9762247283273624
+  },
+  "train_range": [
+   -1.6995,
+   0.1
+  ],
+  "frac_true_outside": 1.0,
+  "frac_pred_outside": 0.831941031941032,
+  "slope_outside": 0.8852502811086358,
+  "seconds": 1109.5520024299622,
+  "diagnostic": {
+   "name": "1 - max RBF similarity to training set",
+   "pearson": 0.3243418815381588,
+   "spearman": 0.40377736556953137,
+   "mean_score_inside": null,
+   "mean_score_outside": 0.04785993272765188
+  },
+  "key": "lic/eform/target/svr/all",
+  "split_description": "y < -1.7 or y > 0.1 is test",
+  "split_kw": {
+   "lower": -1.7,
+   "upper": 0.1
+  },
+  "n_pool": 6989,
+  "n_test": 2035,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/target_group/ridge/all": {
+  "dataset": "lic",
+  "split": "target_group",
+  "regressor": "ridge",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "alpha": 0.15000000000000002
+  },
+  "oof": {
+   "n": 6336,
+   "mae": 0.08662037505505285,
+   "rmse": 0.1275057670860286,
+   "r2": 0.9396899726272785
+  },
+  "test": {
+   "n": 2688,
+   "mae": 0.3197822593475604,
+   "rmse": 0.6243874261491624,
+   "r2": 0.6624552573681014
+  },
+  "test_inside": {
+   "n": 2291,
+   "mae": 0.30846698922610083,
+   "rmse": 0.6197005349094881,
+   "r2": 0.5409737710362748
+  },
+  "test_outside": {
+   "n": 397,
+   "mae": 0.3850802035497365,
+   "rmse": 0.6507753319594987,
+   "r2": 0.8483720542145712
+  },
+  "train_range": [
+   -2.575,
+   0.3872
+  ],
+  "frac_true_outside": 0.14769345238095238,
+  "frac_pred_outside": 0.17708333333333334,
+  "slope_outside": 1.0104958406307463,
+  "seconds": 16.220454454421997,
+  "diagnostic": {
+   "name": "max |x_j w_j|",
+   "pearson": 0.9356337946636787,
+   "spearman": 0.30277986147904284,
+   "mean_score_inside": 0.7810811092077868,
+   "mean_score_outside": 0.8300602096851506
+  },
+  "key": "lic/eform/target_group/ridge/all",
+  "split_description": "groups with any y < -2.6 or y > 0.4 held out",
+  "split_kw": {
+   "lower": -2.6,
+   "upper": 0.4
+  },
+  "n_pool": 6336,
+  "n_test": 2688,
+  "target": "eform",
+  "unit": "eV/atom"
+ },
+ "lic/eform/target_group/svr/all": {
+  "dataset": "lic",
+  "split": "target_group",
+  "regressor": "svr",
+  "features": [
+   "cgcnn",
+   "schnet",
+   "dimenetpp"
+  ],
+  "best_params": {
+   "C": 100.0,
+   "epsilon": 0.0
+  },
+  "oof": {
+   "n": 6336,
+   "mae": 0.06911953913102334,
+   "rmse": 0.09837956232614228,
+   "r2": 0.9640962640628967
+  },
+  "test": {
+   "n": 2688,
+   "mae": 0.16630316932243533,
+   "rmse": 0.2162286268695745,
+   "r2": 0.9595191678561509
+  },
+  "test_inside": {
+   "n": 2291,
+   "mae": 0.151632097839476,
+   "rmse": 0.19968366030725157,
+   "r2": 0.9523394754539494
+  },
+  "test_outside": {
+   "n": 397,
+   "mae": 0.2509667077795128,
+   "rmse": 0.2940493717589116,
+   "r2": 0.969043090448021
+  },
+  "train_range": [
+   -2.575,
+   0.3872
+  ],
+  "frac_true_outside": 0.14769345238095238,
+  "frac_pred_outside": 0.13802083333333334,
+  "slope_outside": 0.8820628558525518,
+  "seconds": 786.2890238761902,
+  "diagnostic": {
+   "name": "1 - max RBF similarity to training set",
+   "pearson": 0.47241515347603674,
+   "spearman": 0.42730017589772956,
+   "mean_score_inside": 0.08986232424359791,
+   "mean_score_outside": 0.10238325196437326
+  },
+  "key": "lic/eform/target_group/svr/all",
+  "split_description": "groups with any y < -2.6 or y > 0.4 held out",
+  "split_kw": {
+   "lower": -2.6,
+   "upper": 0.4
+  },
+  "n_pool": 6336,
+  "n_test": 2688,
+  "target": "eform",
+  "unit": "eV/atom"
+ }
+}
